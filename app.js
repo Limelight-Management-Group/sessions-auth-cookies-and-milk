@@ -1,9 +1,16 @@
+'use strict'
+const http = require('http')
 const express = require( 'express' );
 const app = express();
+const server = http.createServer(app)
+const socketIo = require('socket.io')
+const io = socketIo(server)
 var session = require( 'express-session' );
 const bodyParser = require( 'body-parser' );
 const ejs = require( 'ejs' );
 require('./controllers/userController')(app);
+require('./public/js/tracker')(app);
+require('./views/header/head')(app);
 var morgan = require('morgan')
 const path = require("path");
 
@@ -34,7 +41,6 @@ app.use(session( {
   }
 } ) );
 
-
 app.get('/', (req, res) => {
     console.log('HERE IS THE COOKIE!', req.cookies)
     // console.log('session check!', req.session)
@@ -46,7 +52,7 @@ var port = process.env.PORT || 3002
 
 
 // listen to port
-app.listen(port, function() {
+server.listen(port, function() {
 console.log('session and cookies is listening on port: ' + port);
 });
 
