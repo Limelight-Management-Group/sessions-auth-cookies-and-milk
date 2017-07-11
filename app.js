@@ -5,7 +5,7 @@ const app = express();
 const server = http.createServer(app)
 // const wss = new SocketServer({ server });
 const socketIo = require('socket.io')
-const io = socketIo(server)
+const io = require('socket.io').listen(server);
 var session = require( 'express-session' );
 const bodyParser = require( 'body-parser' );
 const ejs = require( 'ejs' );
@@ -91,9 +91,8 @@ var port = process.env.PORT || 3002
 
 
 // listen to port
-server.listen(port, function() {
-console.log('session and cookies is listening on port: ' + port);
-});
+server.listen(port) 
+console.log('session and cookies is listening on port: ' + port);;
 
 
 module.exports = app;
