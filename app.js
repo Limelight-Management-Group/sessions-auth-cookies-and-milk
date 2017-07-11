@@ -92,7 +92,7 @@ var port = process.env.PORT || 3002
 
 
 // listen to port
-app.listen(port) 
+server.listen(port) 
 console.log('session and cookies is listening on port: ' + port);;
 
 
