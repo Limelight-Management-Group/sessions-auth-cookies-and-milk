@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Limelight-Management-Group/sessions-auth-cookies-and-milk#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "bufferutil": "3.0.2",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
@@ -26,6 +27,8 @@
     "express-validator": "^3.2.0",
     "morgan": "^1.8.2",
     "path": "^0.12.7",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.3",
+    "utf-8-validate": "3.0.3",
+    "ws": "3.0.0"
   }
 }
