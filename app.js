@@ -10,9 +10,9 @@ const server = http.createServer(app)
 var session = require( 'express-session' );
 const bodyParser = require( 'body-parser' );
 const ejs = require( 'ejs' );
-require('./controllers/userController')(app);
-require('./views/tracker')(app);
-require('./views/header/head')(app);
+// require('./controllers/userController')(app);
+// require('./views/tracker')(app);
+// require('./views/header/head')(app);
 var morgan = require('morgan')
 const path = require("path");
 const locationMap = new Map()
