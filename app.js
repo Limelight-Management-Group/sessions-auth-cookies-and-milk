@@ -96,5 +96,6 @@ console.log('session and cookies is listening on port: ' + port);
 });
 
 
+module.exports = app;
 
 	
