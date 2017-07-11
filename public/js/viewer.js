@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	setInterval(() => {
 		socket.emit('requestLocations')
-	}, 2000)
+	}, 1000)
 }) 
 
 function initMap() {

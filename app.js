@@ -3,6 +3,7 @@ const http = require('http')
 const express = require( 'express' );
 const app = express();
 const server = http.createServer(app)
+// const wss = new SocketServer({ server });
 const socketIo = require('socket.io')
 const io = socketIo(server)
 var session = require( 'express-session' );
@@ -62,6 +63,8 @@ app.get('/viewer', (req, res) => {
     res.render('viewer');
 })
 
+
+
 io.on('connection', socket => {
 	socket.on('registerTracker', () => {
 		locationMap.set(socket.id, {lat: null, lng: null})
@@ -91,5 +94,7 @@ var port = process.env.PORT || 3002
 server.listen(port, function() {
 console.log('session and cookies is listening on port: ' + port);
 });
+
+
 
 	
