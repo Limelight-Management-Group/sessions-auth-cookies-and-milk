@@ -10,9 +10,9 @@ const server = http.createServer(app)
 var session = require( 'express-session' );
 const bodyParser = require( 'body-parser' );
 const ejs = require( 'ejs' );
-// require('./controllers/userController')(app);
-// require('./views/tracker')(app);
-// require('./views/header/head')(app);
+require('./controllers/userController')(app);
+require('./views/tracker')(app);
+require('./views/header/head')(app);
 var morgan = require('morgan')
 const path = require("path");
 const locationMap = new Map()
@@ -66,27 +66,27 @@ app.get('/viewer', (req, res) => {
 
 
 
-// io.on('connection', socket => {
-// 	socket.on('registerTracker', () => {
-// 		locationMap.set(socket.id, {lat: null, lng: null})
-// 	})
+io.on('connection', socket => {
+	socket.on('registerTracker', () => {
+		locationMap.set(socket.id, {lat: null, lng: null})
+	})
 
-// 	socket.on('updateLocation', pos => {
-// 		if(locationMap.has(socket.id)) {
-// 			locationMap.set(socket.id, pos)
-// 			console.log(socket.id, pos)
-// 		}
-// 		// locationMap.set(socket.id)
-// 	})
+	socket.on('updateLocation', pos => {
+		if(locationMap.has(socket.id)) {
+			locationMap.set(socket.id, pos)
+			console.log(socket.id, pos)
+		}
+		// locationMap.set(socket.id)
+	})
 
-// 	socket.on('requestLocations', () => {
-// 		socket.emit('locationsUpdate', Array.from(locationMap))
-// 	})
+	socket.on('requestLocations', () => {
+		socket.emit('locationsUpdate', Array.from(locationMap))
+	})
 
-// 	socket.on('disconnect', () => {
-// 		locationMap.delete(socket.id)
-// 	})
-// })
+	socket.on('disconnect', () => {
+		locationMap.delete(socket.id)
+	})
+})
 
 var port = process.env.PORT || 3002
 
