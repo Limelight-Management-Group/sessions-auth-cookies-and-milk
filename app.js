@@ -3,10 +3,10 @@ const http = require('http')
 const express = require( 'express' );
 const app = express();
 const server = http.createServer(app)
-// const wss = new SocketServer({ server });
-// const socketIo = require('socket.io')
+const wss = new SocketServer({ server });
+const socketIo = require('socket.io')
 
-// const io = require('socket.io').listen(server);
+const io = require('socket.io').listen(server);
 var session = require( 'express-session' );
 const bodyParser = require( 'body-parser' );
 const ejs = require( 'ejs' );
