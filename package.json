@@ -29,6 +29,7 @@
     "express-validator": "^3.2.0",
     "morgan": "^1.8.2",
     "path": "^0.12.7",
+    "pg-promise": "^6.3.5",
     "socket.io": "^2.0.3",
     "utf-8-validate": "3.0.3",
     "ws": "3.0.0"
