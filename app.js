@@ -99,7 +99,7 @@ app.route('/sign_up')
     })
 .then(user => {
     req.session.user = user.dataValues;
-    res.redirect('/login', {user: user});
+    res.render('login', {user: user});
 })
 .catch(error => {
     console.log(error)
