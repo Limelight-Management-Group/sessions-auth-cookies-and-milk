@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Limelight-Management-Group/sessions-auth-cookies-and-milk#readme",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
     "bufferutil": "3.0.2",
     "cookie-parser": "^1.4.3",

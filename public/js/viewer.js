@@ -2,6 +2,7 @@ let map
 let markers = new Map()
 document.addEventListener('DOMContentLoaded', () => {
 	const socket = io('/')
+	const breadCrumb = [];
 
 	socket.on('locationsUpdate', locations => {
 		console.log(locations)
@@ -11,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				map,
 				title: id
 			})
+			let eachMarker = breadCrumb.push(marker)
+			console.log(eachMarker)
 			if(markers.has(id)) {
 				const oldMarker = markers.get(id)
 				oldMarker.setMap(null)
@@ -31,7 +34,7 @@ function initMap() {
 		const { latitude: lat, longitude: lng } = pos.coords
 		map = new google.maps.Map(document.getElementById('map'), {
 	      center: { lat, lng },
-	      zoom: 8
+	      zoom: 20
 	    })
 	}, err => {
 		console.error(err)
