@@ -100,6 +100,7 @@ app.route('/sign_up')
 .then(user => {
     req.session.user = user.dataValues;
     res.render('login', {user: user});
+    console.log('this is the user: ', user)
 })
 .catch(error => {
     console.log(error)
