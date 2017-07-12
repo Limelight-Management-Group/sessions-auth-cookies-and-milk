@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS the_jolly_green_giant;
+-- DROP DATABASE IF EXISTS the_jolly_green_giant;
 
-CREATE DATABASE the_jolly_green_giant;
+-- CREATE DATABASE the_jolly_green_giant;
 
-\c the_jolly_green_giant
+-- \c the_jolly_green_giant
 
 
 
