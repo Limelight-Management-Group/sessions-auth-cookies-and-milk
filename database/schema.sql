@@ -19,6 +19,7 @@ location TEXT,
 age integer
 );
 
+
 DROP TABLE IF EXISTS messages;
 CREATE TABLE messages(
 id SERIAL PRIMARY KEY,
