@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const positionOptions = {
 		enableHighAccuracy: true,
-		maximumAge: 0
+		maximumAge: 0,
+		zoom: 15
 	}
 
 	setInterval(() => {
