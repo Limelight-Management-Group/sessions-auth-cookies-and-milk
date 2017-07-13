@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				title: id
 			})
 			let eachMarker = breadCrumb.push(marker)
-			console.log(eachMarker)
+			for(var i = 0; i < breadCrumb.length; i++){
+				console.log('this is the breadCrum: ', breadCrumb[i])
+				console.log(breadCrumb.length)
+			}
 			if(markers.has(id)) {
 				const oldMarker = markers.get(id)
 				oldMarker.setMap(null)
@@ -25,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	setInterval(() => {
 		socket.emit('requestLocations')
-	}, 1000)
+	}, 2000)
 }) 
 
 function initMap() {
@@ -34,7 +37,7 @@ function initMap() {
 		const { latitude: lat, longitude: lng } = pos.coords
 		map = new google.maps.Map(document.getElementById('map'), {
 	      center: { lat, lng },
-	      zoom: 20
+	      zoom: 15
 	    })
 	}, err => {
 		console.error(err)
