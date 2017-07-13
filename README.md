@@ -8,8 +8,11 @@
 ### Many Californians have businesses that would greatly benefit from the ability to use our shopping cart and real-time delivery tracking application
 ---
 # Link to live example 
-
-   [link to heroku app](https://) 
+   
+   [link to heroku app](https://the-jolly-green-giant.herokuapp.com/tracker)
+   [link to heroku app](https://the-jolly-green-giant.herokuapp.com/viewer) 
+   ##### *Note you must open the tracker, then open the viewer, to see a marker!*
+   ### Keep both browsers open, to track your location in real-time!
   
 ---
 
@@ -75,4 +78,17 @@ localhost:3002/tracker
 ```
 + 3. Viewer should now have a marker that displays your location
 #### As long as both browsers are open your location will be tracked and stored into the breadcrumbs array.
-![Dev Console display](/public/images/breadcrumb)
+![Dev Console display](/public/images/breadcrumb.png)
+---
+![Location Marker](/public/images/marker.png)
+
+***
+# So What's Next for The JGG App?
+### I am also building a shopping cart front end that I will add to this repo, once I solidify the funcationality. Users will be able to make purchases through the PayPal API. I plan to pass these purchases and customer's locations to our drivers. This is, obviously, a work in process. 
+
+#### If you would like to contribute to that repo, you can just follow this link:
+   [link to Shopping Cart's Repo](https://github.com/Limelight-Management-Group/the-jolly-green-giant)
+   
+   ![Shopping Cart](/public/images/shopping-cart.png)
+   
+
